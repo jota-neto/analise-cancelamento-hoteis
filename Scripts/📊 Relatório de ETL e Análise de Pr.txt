@@ -1,0 +1,26 @@
+📊 Relatório de ETL e Análise de Probabilidade: Hotel Bookings
+
+1. Objetivo do Projeto
+Este projeto visa tratar e analisar uma base histórica de reservas de hotéis (2015-2017) para identificar padrões de cancelamento e calcular probabilidades frequentistas que auxiliem na tomada de decisão gerencial.
+
+2. Processo de ETL (Linguagem M)
+A etapa de Extração, Transformação e Carregamento foi focada na criação de um pipeline de dados escalonável e limpo.
+
+Padronização e Tradução
+
+Técnica: Utilização de uma Tabela de Tradução externa vinculada via Linguagem M.
+
+Decisão: Adotei o padrão snake_case (ex: tipo_hotel, is_cancelado) para garantir compatibilidade técnica com futuras etapas de análise em Python ou SQL e facilitar a leitura de fórmulas.
+
+Qualidade e Limpeza de Dados
+Tratamento de Nulos: Valores null nas colunas de agentes e empresas foram substituídos por 0.
+
+Significado: O valor 0 representa reservas diretas, permitindo a inclusão de 100% da amostra nos cálculos de probabilidade condicional.
+
+Sanitização de Erros: Identifiquei erros de conversão (<1%) na coluna qtd_criancas. Em vez de descartar os registros, apliquei a técnica de Substituir Erros por 0, mantendo a integridade do Espaço Amostral.
+
+3. Metodologia Estatística
+Para este módulo, apliquei conceitos de Probabilidade Frequentista sobre a base tratada de 119.390 registros. Espaço Amostral ($S$): Definido pela contagem total de reservas por tipo de hotel.Evento de Interesse ($A$): Soma das ocorrências na variável binária is_cancelado.Cálculo da Probabilidade:
+ $P(A) = \frac{\text{Total de Cancelamentos}}{\text{Total de Reservas}}$ (Frequência Relativa).
+
+
