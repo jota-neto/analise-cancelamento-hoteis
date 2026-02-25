@@ -7,7 +7,7 @@
 ## 📌 Visão Geral do Projeto
 Este projeto analisa uma base histórica de **119.390 reservas** de hotéis para identificar padrões de cancelamento e fornecer insights estratégicos para a gestão de receitas (**Revenue Management**). O foco inicial foi a estruturação de um pipeline de dados confiável e a medição do risco macro por unidade de negócio.
 
-> **Nota de Status:** Este estudo de caso está sendo construído em etapas. Atualmente, concluímos o tratamento de dados (ETL) e a análise de probabilidade geral.
+> **Nota de Status:** Este estudo de caso está sendo construído em etapas. Atualmente, foi concluído o tratamento de dados (ETL) e a análise de probabilidade geral.
 
 ---
 
@@ -23,7 +23,7 @@ Para garantir análises precisas, utilizei o **Power Query (Linguagem M)** para 
 ---
 
 ## 📊 Análise de Probabilidade (Resultados Iniciais)
-Nesta etapa, aplicamos o conceito de **Probabilidade Frequentista** para entender o comportamento de risco de cada hotel:
+Nesta etapa, foi aplicado o conceito de **Probabilidade Frequentista** para entender o comportamento de risco de cada hotel:
 
 ![Fórmula de Cálculo](Imagens/calculoProbabilidade.png)
 
